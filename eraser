@@ -1,0 +1,15 @@
+answer = 0
+N = int(input())
+Numbers = []
+for i in range(1, N+1):
+    Numbers.append(i)
+
+
+while len(Numbers) != 1:
+    for i in range(len(Numbers)):
+        if i % 2 == 0:
+            Numbers.remove(Numbers[i-1])
+            
+    answer += 1
+    
+print(answer)
